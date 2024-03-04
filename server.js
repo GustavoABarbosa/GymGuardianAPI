@@ -1,8 +1,13 @@
 import { fastify } from 'fastify'
+import fastifyCors from 'fastify-cors'
 import { DatabasePostgress } from './database-postgress.js'
 // import { DatabaseMemory } from './database-memory.js'
 
 const server = fastify()
+
+server.register(fastifyCors, {
+  origin: 'http://localhost:3001'
+})
 
 // const database = new DatabaseMemory()
 const database = new DatabasePostgress
