@@ -1,5 +1,5 @@
 import { fastify } from 'fastify'
-import fastifyCors from 'fastify-cors'
+import fastifyCors from '@fastify/cors'
 import { DatabasePostgress } from './database-postgress.js'
 // import { DatabaseMemory } from './database-memory.js'
 
